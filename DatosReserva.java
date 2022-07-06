@@ -1,4 +1,5 @@
 
+
 package hotel;
 
 
@@ -7,24 +8,25 @@ public class DatosReserva {
     
 private float precio;
 public float total;
-public int reservar,disponible,noches;
+public int reservar,disponible,dias;
+
 
     //Metodos
 
-    public DatosReserva(float precio, float total, int reservar, int disponible, int noches) {
+    public DatosReserva(float precio, float total, int reservar, int disponible, int dias) {
         
         this.precio=precio;
         this.total=total;
         this.disponible=disponible;
-        this.noches=noches;
+        this.dias=dias;
         this.reservar=reservar;
                        
     }
     
     //metodos getters con argumentos y operaciones
-    public float getTotal(float total, int noches, float precio,int reservar)  {
+    public float getTotal(float total, int dias, float precio,int reservar)  {
         //se multiplica las noches que el usuario se va a ospedar por el precio de la habitacion seleccionada
-        total=(int)noches*precio*reservar;
+        total=(int)dias*precio*reservar;
         return total;   
     }
     public int getReservar(int reservar) {
@@ -46,10 +48,11 @@ public int reservar,disponible,noches;
         return disponible;
     }
     
-    public int getNoches(int noches,float precio){
+    public int getDias(int dias,float precio){
+        //calcularDias calcular = new calcularDias();   
         //se multplica el precio de las noches que se queda hospedado el usuario
-        noches=(int)((int)noches*precio);
-        return noches;
+        dias=(int)((int)dias*precio);
+        return dias;
     }
     
 }
